@@ -9,6 +9,9 @@ class StethoHttpClientResponse extends StreamView<List<int>>
       : super(stream);
 
   @override
+  HttpClientResponseCompressionState get compressionState => HttpClientResponseCompressionState.notCompressed;
+
+  @override
   X509Certificate get certificate => response.certificate;
 
   @override
